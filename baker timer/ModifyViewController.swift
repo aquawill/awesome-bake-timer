@@ -74,7 +74,7 @@ class ModifyViewController: UIViewController, UITextFieldDelegate  {
     @IBAction func add(_ sender: Any) {
         
         let hrFormatter = DateFormatter()
-        hrFormatter.dateFormat = "hh"
+        hrFormatter.dateFormat = "HH"
         
         let minFormatter = DateFormatter()
         minFormatter.dateFormat = "mm"

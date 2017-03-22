@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let category = UNNotificationCategory(identifier: "remider", actions: [], intentIdentifiers: [], options: [])
         UNUserNotificationCenter.current().setNotificationCategories([category])
         
-        Thread.sleep(forTimeInterval: 1)
+        //Thread.sleep(forTimeInterval: 1)
         
         return true
     }
