@@ -107,6 +107,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate  {
         
         //writing storage
         UserDefaults.standard.set(items, forKey: "bakeTimers")
+        //UserDefaults.standard.synchronize()
         
         // the alert view
         let alert = UIAlertController(title: "Timer Added", message: "Let's bake!", preferredStyle: .alert)
@@ -122,9 +123,23 @@ class SecondViewController: UIViewController, UITextFieldDelegate  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //insert empty item
+        let itemsObject = UserDefaults.standard.object(forKey: "bakeTimers")
+        var items:[[Int]]
+        if let tempItems = itemsObject as? [[Int]] {
+            items = tempItems
+            items.append([])
+        } else {
+            items = []
+        }
+        UserDefaults.standard.set(items, forKey: "bakeTimers")
+        
+        //bar item styling
         self.tabBarController?.tabBar.tintColor = UIColor.orange
         self.tabBarController?.tabBar.backgroundColor = UIColor.black
         timePickerOutlet.setValue(UIColor.white, forKeyPath: "textColor") //https://grokswift.com/transparent-table-view/
+        
         // Do any additional setup after loading the view, typically from a nib.
         let notificationName = Notification.Name("GetUpdateNoti")
         NotificationCenter.default.addObserver(self, selector: #selector(SecondViewController.getUpdateNoti(noti:)), name: notificationName, object: nil)
