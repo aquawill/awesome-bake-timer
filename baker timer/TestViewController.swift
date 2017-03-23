@@ -11,6 +11,10 @@ import UserNotifications
 
 class TestViewController: UIViewController, UIPickerViewDelegate {
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     var index = 0
     var isCounting = false
     
@@ -51,7 +55,7 @@ class TestViewController: UIViewController, UIPickerViewDelegate {
     }
     
     //buttons
-
+    
     @IBAction func backButtonPressed(_ sender: Any) {
         timer.invalidate()
         self.dismiss(animated: true, completion: nil)
@@ -85,7 +89,7 @@ class TestViewController: UIViewController, UIPickerViewDelegate {
         isCounting = false
         playButton.isEnabled = true
         pauseButton.isEnabled = false
-
+        
     }
     @IBAction func forwardButtonPressed(_ sender: Any) {
         resetButton.isEnabled = false
@@ -166,13 +170,14 @@ class TestViewController: UIViewController, UIPickerViewDelegate {
                 message: "Proceed the next setting?",
                 preferredStyle: .alert)
             
-            // 建立[取消]按鈕
+            // cancel button
             let cancelAction = UIAlertAction(
                 title: "No",
                 style: .cancel,
                 handler: nil)
             alertController.addAction(cancelAction)
-            // 建立[確認]按鈕
+            
+            // confirm button
             let okAction = UIAlertAction(
                 title: "Yes",
                 style: .default,
@@ -182,7 +187,7 @@ class TestViewController: UIViewController, UIPickerViewDelegate {
             })
             alertController.addAction(okAction)
             
-            // 顯示提示框
+            // present alert
             self.present(
                 alertController,
                 animated: true,
@@ -193,14 +198,14 @@ class TestViewController: UIViewController, UIPickerViewDelegate {
                 message: "You hungry?",
                 preferredStyle: .alert)
             
-            // 建立[確認]按鈕
+            // confirm button
             let okAction = UIAlertAction(
                 title: "Sure!",
                 style: .default,
                 handler: nil)
             alertController.addAction(okAction)
             
-            // 顯示提示框
+            // present alert
             self.present(
                 alertController,
                 animated: true,

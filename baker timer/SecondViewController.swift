@@ -10,11 +10,15 @@ import UIKit
 
 class SecondViewController: UIViewController, UITextFieldDelegate  {
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     @IBOutlet weak var timePickerOutlet: UIDatePicker!
     @IBOutlet weak var modeSelection: UISegmentedControl!
     @IBOutlet weak var upperSliderOutlet: UISlider!
     @IBOutlet weak var bottomSliderOutlet: UISlider!
-
+    
     var itemIndex:Int! = -1
     
     func getUpdateNoti(noti:Notification) {
@@ -41,7 +45,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate  {
             }
         }
     }
-
+    
     @IBAction func bottomTempSlider(_ sender: UISlider) {
         let bottomTempValue = Int(Int(sender.value) * 10)
         if bottomTempValue > 0 {
@@ -58,9 +62,9 @@ class SecondViewController: UIViewController, UITextFieldDelegate  {
                 upperTempText.text = "Off"
             }
         }
-
+        
     }
-
+    
     @IBOutlet weak var upperTempText: UILabel!
     @IBOutlet weak var bottomTempText: UILabel!
     
@@ -129,6 +133,6 @@ class SecondViewController: UIViewController, UITextFieldDelegate  {
     override func viewDidAppear(_ animated: Bool) {
         print(itemIndex)
     }
-
+    
 }
 

@@ -16,7 +16,6 @@
 		9BB45AE41E154FAF00B654CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BB45AE21E154FAF00B654CC /* LaunchScreen.storyboard */; };
 		9BB6535E1E7F8DE3001D69BD /* ModifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB6535D1E7F8DE3001D69BD /* ModifyViewController.swift */; };
 		9BB653A11E8112C5001D69BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BB653A01E8112C5001D69BD /* Assets.xcassets */; };
-		9BDC894E1E79916300B3ADBD /* CountingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC894D1E79916300B3ADBD /* CountingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +30,6 @@
 		9BB45AE51E154FAF00B654CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BB6535D1E7F8DE3001D69BD /* ModifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyViewController.swift; sourceTree = "<group>"; };
 		9BB653A01E8112C5001D69BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9BDC894D1E79916300B3ADBD /* CountingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +69,6 @@
 				9BB6535D1E7F8DE3001D69BD /* ModifyViewController.swift */,
 				9BB45ADD1E154FAF00B654CC /* Main.storyboard */,
 				9B106A2F1E81564F005DCD90 /* TestViewController.swift */,
-				9BDC894D1E79916300B3ADBD /* CountingViewController.swift */,
 				9B87D8291E784ABB00847AC1 /* ItemTableViewCell.swift */,
 				9BB45AE21E154FAF00B654CC /* LaunchScreen.storyboard */,
 				9BB45AE51E154FAF00B654CC /* Info.plist */,
@@ -155,7 +152,6 @@
 				9B106A301E81564F005DCD90 /* TestViewController.swift in Sources */,
 				9B87D82A1E784ABB00847AC1 /* ItemTableViewCell.swift in Sources */,
 				9BB45ADC1E154FAF00B654CC /* SecondViewController.swift in Sources */,
-				9BDC894E1E79916300B3ADBD /* CountingViewController.swift in Sources */,
 				9BB45AD81E154FAF00B654CC /* AppDelegate.swift in Sources */,
 				9BB6535E1E7F8DE3001D69BD /* ModifyViewController.swift in Sources */,
 				9BB45ADA1E154FAF00B654CC /* FirstViewController.swift in Sources */,

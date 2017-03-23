@@ -10,10 +10,10 @@ import UIKit
 import UserNotifications
 
 class CountingViewController: UIViewController, UIPickerViewDelegate {
-
+    
     var index = 0
     var isCounting = false
-
+    
     func loadStoredData(){
         if index >= 0 && index < bakeTimers.count {
             seconds.seconds = bakeTimers[index][2]
@@ -49,7 +49,7 @@ class CountingViewController: UIViewController, UIPickerViewDelegate {
         resetButton.isEnabled = false
         isCounting = false
     }
-
+    
     //buttons
     @IBAction func backButtonPressed(_ sender: Any) {
         timer.invalidate()
@@ -107,9 +107,9 @@ class CountingViewController: UIViewController, UIPickerViewDelegate {
         playButton.isEnabled = true
         pauseButton.isEnabled = false
         resetButton.isEnabled = false
-
+        
     }
-   
+    
     
     //labels
     @IBOutlet weak var timerIndex: UILabel!
@@ -254,21 +254,21 @@ class CountingViewController: UIViewController, UIPickerViewDelegate {
         loadStoredData()
         isCounting = false
     }
-        // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

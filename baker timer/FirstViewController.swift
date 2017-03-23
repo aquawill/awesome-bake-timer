@@ -11,6 +11,10 @@ import Darwin
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     var timer = Timer()
     var valueToPass:Int!
 
