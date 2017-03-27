@@ -23,7 +23,12 @@ class TestViewController: UIViewController, UIPickerViewDelegate {
             seconds.seconds = bakeTimers[index][2]
             let ut = bakeTimers[index][0]
             let bt = bakeTimers[index][1]
-            timerIndex.text = String("Bake Timer No. \(index + 1)")
+            if index < bakeTimers.count - 1{
+                timerIndex.text = String("Bake Timer - Step \(index + 1)")
+            } else {
+                timerIndex.text = String("Bake Timer - Final Step")
+            }
+            
             timeCounting.text = String(timeString(time: TimeInterval(seconds.seconds)))
             upperTemp.text = "\(ut)°C"
             bottomTemp.text = "\(bt)°C"
@@ -119,6 +124,8 @@ class TestViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var timeCounting: UILabel!
     @IBOutlet weak var upperTemp: UILabel!
     @IBOutlet weak var bottomTemp: UILabel!
+    @IBOutlet weak var ovenTempLabel: UILabel!
+    
     
     //button outlets
     @IBOutlet weak var playButton: UIBarButtonItem!
@@ -126,8 +133,6 @@ class TestViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var forwardButton: UIBarButtonItem!
     @IBOutlet weak var pauseButton: UIBarButtonItem!
     @IBOutlet weak var rewindButton: UIBarButtonItem!
-    
-    
     
     var timer = Timer()
     var bakeTimers = [[Int]]()
@@ -236,6 +241,18 @@ class TestViewController: UIViewController, UIPickerViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let screenSize: CGRect = UIScreen.main.bounds
+        let screenWidth = screenSize.width
+        print("screenWidth \(screenWidth)")
+        let screenHeight = screenSize.height
+        print("screenHeight \(screenHeight)")
+        
+        if screenHeight < 569.0{
+            ovenTempLabel.isEnabled = false
+        }
+
+        
         pauseButton.isEnabled = false
         playButton.isEnabled = false
         forwardButton.isEnabled = false

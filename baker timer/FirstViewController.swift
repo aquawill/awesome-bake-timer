@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Darwin
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -42,13 +41,14 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             message: "Caution! This action cannot be undone!",
             preferredStyle: .alert)
         
-        // 建立[取消]按鈕
+        // cancel button
          let cancelAction = UIAlertAction(
          title: "No",
          style: .cancel,
          handler: nil)
          alertController.addAction(cancelAction)
-        // 建立[確認]按鈕
+        
+        // confirm button
         let okAction = UIAlertAction(
             title: "Yes",
             style: .default,
@@ -58,12 +58,11 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         })
         alertController.addAction(okAction)
         
-        // 顯示提示框
+        // show alert
         self.present(
             alertController,
             animated: true,
             completion: nil)
-        
     }
     
     //http://stackoverflow.com/questions/28315133/swift-pass-uitableviewcell-label-to-new-viewcontroller
@@ -102,7 +101,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         _ = DateFormatter()
         let timeMin = Int(list[2])/60
         let timeSec = Int(list[2])%60
-        
         if ut > 0{
             cell.upperTempValue.text = "\(ut)°C"
         } else {
@@ -130,7 +128,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.table.backgroundView = imageView
         table.tableFooterView = UIView(frame: CGRect.zero) //http://stackoverflow.com/questions/29997935/cgrectzero-vs-cgrect-zerorect
         imageView.contentMode = .scaleAspectFill
-        
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -146,26 +143,25 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 message: "Please add a timer first",
                 preferredStyle: .alert
                 )
-            /*// 建立[取消]按鈕
+            /*// cancel button
              let cancelAction = UIAlertAction(
              title: "cancel",
              style: .cancel,
              handler: nil)
              alertController.addAction(cancelAction)
              */
-            // 建立[確認]按鈕
+            // confirm button
             let okAction = UIAlertAction(
                 title: "Sure!",
                 style: .default,
                 handler: nil)
             alertController.addAction(okAction)
             
-            // 顯示提示框
+            // show alert
             self.present(
                 alertController,
                 animated: true,
                 completion: nil)
-            
         } else {
             playButton.isEnabled = true
             cleanButton.isEnabled = true
@@ -191,14 +187,11 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             print(bakeTimers)
             checkTimer()
         }
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 

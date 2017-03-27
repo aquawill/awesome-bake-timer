@@ -9,18 +9,19 @@
 /* Begin PBXBuildFile section */
 		9B106A301E81564F005DCD90 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B106A2F1E81564F005DCD90 /* TestViewController.swift */; };
 		9B87D82A1E784ABB00847AC1 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B87D8291E784ABB00847AC1 /* ItemTableViewCell.swift */; };
+		9BA344DE1E860638009C5C4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BA344DD1E860638009C5C4D /* Assets.xcassets */; };
 		9BB45AD81E154FAF00B654CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB45AD71E154FAF00B654CC /* AppDelegate.swift */; };
 		9BB45ADA1E154FAF00B654CC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB45AD91E154FAF00B654CC /* FirstViewController.swift */; };
 		9BB45ADC1E154FAF00B654CC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB45ADB1E154FAF00B654CC /* SecondViewController.swift */; };
 		9BB45ADF1E154FAF00B654CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BB45ADD1E154FAF00B654CC /* Main.storyboard */; };
 		9BB45AE41E154FAF00B654CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BB45AE21E154FAF00B654CC /* LaunchScreen.storyboard */; };
 		9BB6535E1E7F8DE3001D69BD /* ModifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB6535D1E7F8DE3001D69BD /* ModifyViewController.swift */; };
-		9BB653A11E8112C5001D69BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BB653A01E8112C5001D69BD /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9B106A2F1E81564F005DCD90 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		9B87D8291E784ABB00847AC1 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		9BA344DD1E860638009C5C4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BB45AD41E154FAF00B654CC /* baker timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "baker timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BB45AD71E154FAF00B654CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BB45AD91E154FAF00B654CC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -29,7 +30,6 @@
 		9BB45AE31E154FAF00B654CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BB45AE51E154FAF00B654CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BB6535D1E7F8DE3001D69BD /* ModifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyViewController.swift; sourceTree = "<group>"; };
-		9BB653A01E8112C5001D69BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 		9BB45AD61E154FAF00B654CC /* baker timer */ = {
 			isa = PBXGroup;
 			children = (
-				9BB653A01E8112C5001D69BD /* Assets.xcassets */,
+				9BA344DD1E860638009C5C4D /* Assets.xcassets */,
 				9BB45AD71E154FAF00B654CC /* AppDelegate.swift */,
 				9BB45AD91E154FAF00B654CC /* FirstViewController.swift */,
 				9BB45ADB1E154FAF00B654CC /* SecondViewController.swift */,
@@ -137,7 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BB45AE41E154FAF00B654CC /* LaunchScreen.storyboard in Resources */,
-				9BB653A11E8112C5001D69BD /* Assets.xcassets in Resources */,
+				9BA344DE1E860638009C5C4D /* Assets.xcassets in Resources */,
 				9BB45ADF1E154FAF00B654CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,7 +280,7 @@
 				INFOPLIST_FILE = "baker timer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.self.baker-timer";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.self.baker-timer-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -295,7 +295,7 @@
 				INFOPLIST_FILE = "baker timer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.self.baker-timer";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.self.baker-timer-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

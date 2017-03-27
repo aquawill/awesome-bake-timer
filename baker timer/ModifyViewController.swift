@@ -8,6 +8,11 @@
 import UIKit
 
 class ModifyViewController: UIViewController, UITextFieldDelegate  {
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     var bakeTimers = [[Int]]()
     var ut:Int = 0
     var bt:Int = 0

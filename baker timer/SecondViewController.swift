@@ -129,7 +129,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate  {
         var items:[[Int]]
         if let tempItems = itemsObject as? [[Int]] {
             items = tempItems
-            items.append([])
+            //items.append([])
         } else {
             items = []
         }
